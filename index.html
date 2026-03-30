@@ -22,6 +22,15 @@
             z-index: 1000;
         }
 
+        .titre-entreprise {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+
 
         .logo img { height: 60px; width: auto; }
 
@@ -147,6 +156,41 @@
             font-size: 0.9rem;
             margin-top: 40px;
         }
+        
+    /* --- MENU HAMBURGER --- */
+.hamburger {
+    display: none;
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* --- VERSION SMARTPHONE --- */
+@media (max-width: 768px) {
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #0a2a43;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    nav a {
+        margin: 15px 0;
+        font-size: 1.3rem;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+        
     </style>
 </head>
 
@@ -241,6 +285,12 @@
     © 2026 – Pégazus Informatique – Mauguio
 </footer>
 
+ <script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+   
 </body>
 </html> ou dois je placer ceci .titre-entreprise {
     font-size: 2.8rem;
